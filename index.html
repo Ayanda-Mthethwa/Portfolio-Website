@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayanda's Portfolio</title>
+
+    <!--box icons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--script for sending a message-->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("EkYckxK0B3RH85QLe"); // Replace with your actual public key from EmailJS
+        })();
+    </script>
+
+
+</head>
+
+<body>
+
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#Projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Ayanda Mthethwa</h1>
+            <h3>And I'm a <span>Software Developer</span></h3>
+            <p>Passionate about building clean, responsive and user -friendly web
+                applications that solve real-world problems.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/ayanda-mthethwa-425447249/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/ayanda-mthethwa"><i class='bx bxl-github'></i></a>
+            </div>
+            <a href="file/ResumeAyo.pdf" class="btn" download="Ayanda_Mthethwa_CV.pdf">Download Resume</a>
+
+        </div>
+        <div class="home-img">
+            <img src="images/ayo.jpg">
+        </div>
+    </section>
+
+    <!--about section design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="images/ayo.jpg">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>I'm a Software Development graduated from Tshwane University of Technology with
+                experience in front-end and basic back-end development using React, HTML5, CSS and JavaScript. I've
+                worked with back-end technologies like Node.js, Python, AI frameworks, MySQL and Express. I enjoy
+                turning
+                ideas into real projects and always aim to write code that is efficient, maintainable and ethical AI
+                practices </p>
+        </div>
+    </section>
+
+    <!--service section design-->
+
+    <section class="services" id="services">
+        <h2 class="heading">Technical<span> Skills</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>No-Code Applications</h3>
+                <p>
+                    I design web applications using AI/ML frameworks TensorFlow.js for image classification, OpenAI GPT
+                    API for content generation
+                    Scikit-learn for model building, Fairlearn for bias analysis
+                </p>
+
+            </div>
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Responsive Web Design</h3>
+                <p>I design websites that look great and work smoothly on all screen
+                    sizes, from phones to desktops</p>
+
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Front-End Development</h3>
+                <p>I build interactive user interfaces using React, HTML5, CSS and JavaScript
+                    to ensure a smooth user experience</p>
+
+            </div>
+
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Back-End Development</h3>
+                <p>I create server-side logic and manage database using Node.js, Python, Flask, Express and MySQL
+                    for secure, efficient performance</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="Projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+
+        <div class="portfolio-container">
+
+            <!-- Project 1 -->
+            <div class="portfolio-box">
+                <img src="images/apple.png">
+                <div class="portfolio-layer">
+                    <h4>Apple Disease Detector</h4>
+                    <div class="project-links">
+                        <a href="https://blog-thin-05039763.figma.site/" target="_blank"><i class='bx bx-link'></i></a>
+                        <a href="https://github.com/Agristorm/Apple-Disease-Detector-CropCareAI-" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://capeitinitiative-my.sharepoint.com/:w:/g/personal/zotha_shezi_capaciti_org_za/Ed5oEysjIPtJrfDHuBa1gPkBvnTwvxaiROv9ThShhn5lVg?e=M6NvsJ" target="_blank"><i
+                                class='bx bx-file'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-box">
+                <img src="images/adult.png" alt="Adult Census Model">
+                <div class="portfolio-layer">
+                    <h4>Adult Census Model</h4>
+                    <div class="project-links">
+                        <a href="https://colab.research.google.com/drive/1kSP9VCLymslnjaquDqMS8z0tgTykR80Q?usp=sharing"
+                            target="_blank" aria-label="Live demo">
+                            <i class='bx bx-link'></i>
+                        </a>
+                        <a href="https://github.com/Agristorm/Adult-Census-Bias-Analysis-Model" target="_blank"
+                            aria-label="GitHub repository">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <!-- ← new documentation/file icon (added) -->
+                        <a href="https://www.canva.com/design/DAGxuZpKlAU/x7GaouC3xCx9QrCrsB44Ow/edit?utm_content=DAGxuZpKlAU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank"
+                            aria-label="Project documentation">
+                            <i class='bx bx-file'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-box">
+                <img src="images/smart.png">
+                <div class="portfolio-layer">
+                    <h4>SmartEdu-Gr12</h4>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/make/dS0zWAWOKto8NYDY5rmImF/SmartEdu-Grade-12-Content-Generator?node-id=0-1&p=f&t=teZfrzLIlb6Op6Kc-0&fullscreen=1"
+                            target="_blank"><i class='bx bx-link'></i></a>
+                        <a href="https://github.com/Agristorm/SmartEdu-Gr12-contentCreatorr" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://capeitinitiative-my.sharepoint.com/:w:/g/personal/nokwanda_buthelezi_capaciti_org_za/EcsBoafG9S1IvD9tEAqpwPgB-d4vbFTveCUeclaDIAG0Uw?e=As3flG" target="_blank"><i
+                                class='bx bx-file'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-box">
+                <img src="images/study.png">
+                <div class="portfolio-layer">
+                    <h4>AI Study Buddy</h4>
+                    <div class="project-links">
+                        <a href="https://ai-study-buddy-xi.vercel.app/" target="_blank"><i class='bx bx-link'></i></a>
+                        <a href="https://github.com/Agristorm/AI-Study-buddy" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://capeitinitiative-my.sharepoint.com/:w:/g/personal/nokwanda_buthelezi_capaciti_org_za/EW6Xd_3XWFZGoVPCAnX0lR8BbtCaWulDIDE63yWvZTq4aQ?e=3oZgx6" target="_blank"><i
+                                class='bx bx-file'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="portfolio-box">
+                <img src="images/sentiment.png" alt="Sentimental Analysis Project">
+                <div class="portfolio-layer">
+                    <h4>Sentimental-Analysis</h4>
+                    <div class="project-links">
+                        <a href="https://sentimentanalysis-xohxyzkgakxau33ww3tf6z.streamlit.app/" target="_blank"><i
+                                class='bx bx-link'></i></a>
+                        <a href="https://github.com/Agristorm/sentimental-analysis" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://capeitinitiative-my.sharepoint.com/:w:/g/personal/zikhona_bam_capaciti_org_za/EfcYQQWwyNpJjNjGe7XZcLMBUcxQRul0M4xtWwpXY4UfZw?e=Pm7lkB" target="_blank"><i
+                                class='bx bx-file'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="portfolio-box">
+                <img src="images/resume.png" alt="AI Resume Builder Project">
+                <div class="portfolio-layer">
+                    <h4>AI Resume Builder</h4>
+                    <div class="project-links">
+                        <a href="https://bmokgola.github.io/resume-/" target="_blank"><i class='bx bx-link'></i></a>
+                        <a href="https://github.com/Agristorm/AI-Resume-Biulder" target="_blank"><i
+                                class='bx bxl-github'></i></a>
+                        <a href="https://capeitinitiative-my.sharepoint.com/:w:/g/personal/nokwanda_buthelezi_capaciti_org_za/EaiVVqwmVvRBljCdVQWofOoBKkP9pIwIQYkJ9ASp_Fcmuw?e=oc52uD" target="_blank"><i
+                                class='bx bx-file'></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--contact section design-->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile" placeholder="Mobile Number" required>
+                <input type="text" name="subject" placeholder="Email Subject" required>
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+
+    </section>
+
+    <!--footer design-->
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Ayanda_Mthethwa | All rights Reserved.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!--custom-->
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_6oguuey", "template_ftyuyih", this)
+                .then(function (response) {
+                    alert("✅ Message sent successfully!");
+                    document.getElementById("contact-form").reset();
+                }, function (error) {
+                    alert("❌ Failed to send message. Please try again.");
+                    console.error(error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
