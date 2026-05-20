@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 445">
+  <defs>
+
+    <!-- Gold metallic (vertical) -->
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3B1F00"/>
+      <stop offset="12%"  stop-color="#8B5E00"/>
+      <stop offset="32%"  stop-color="#C8960C"/>
+      <stop offset="48%"  stop-color="#FFD700"/>
+      <stop offset="56%"  stop-color="#FFF5B0"/>
+      <stop offset="68%"  stop-color="#D4A017"/>
+      <stop offset="84%"  stop-color="#8B5E00"/>
+      <stop offset="100%" stop-color="#3B1F00"/>
+    </linearGradient>
+
+    <!-- Silver / chrome metallic (vertical) -->
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0d0d0d"/>
+      <stop offset="12%"  stop-color="#4a4a4a"/>
+      <stop offset="32%"  stop-color="#a8a8a8"/>
+      <stop offset="48%"  stop-color="#e0e0e0"/>
+      <stop offset="56%"  stop-color="#ffffff"/>
+      <stop offset="68%"  stop-color="#b8b8b8"/>
+      <stop offset="84%"  stop-color="#5a5a5a"/>
+      <stop offset="100%" stop-color="#0d0d0d"/>
+    </linearGradient>
+
+    <!-- Ring: gold bright at top, fades to near-invisible at bottom -->
+    <linearGradient id="ring" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#8B6000"  stop-opacity="1"/>
+      <stop offset="20%"  stop-color="#FFD700"  stop-opacity="1"/>
+      <stop offset="50%"  stop-color="#C0C0C0"  stop-opacity="0.8"/>
+      <stop offset="75%"  stop-color="#666666"  stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#333333"  stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- Name gold -->
+    <linearGradient id="nameGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#DAA520"/>
+      <stop offset="50%"  stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#DAA520"/>
+    </linearGradient>
+
+    <!-- Gold ambient glow for A -->
+    <filter id="aGlow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0.55 0 0 0  0.55 0.3 0 0 0  0 0 0 0 0  0 0 0 0.4 0" result="col"/>
+      <feMerge>
+        <feMergeNode in="col"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Circuit trace gold glow -->
+    <filter id="trace" x="-120%" y="-120%" width="340%" height="340%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0.6 0 0 0  0.6 0.35 0 0 0  0 0 0 0 0  0 0 0 0.7 0" result="col"/>
+      <feMerge>
+        <feMergeNode in="col"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+  </defs>
+
+  <!-- ══ CIRCULAR DARK BACKGROUND ══ -->
+  <circle cx="200" cy="196" r="192" fill="#050505"/>
+
+  <!-- ══ RING — gradient fades at bottom for "open" look ══ -->
+  <circle cx="200" cy="196" r="183"
+    fill="none" stroke="url(#ring)" stroke-width="2.5"/>
+
+  <!-- ══════════════════════════════════════════════
+       LETTERS — back to front rendering order
+       font-size: 168  |  baseline: y=274
+       T center x=200  |  M center x=270  |  A center x=144
+  ══════════════════════════════════════════════ -->
+
+  <!-- T (silver, tallest — goes between A and M) -->
+  <text x="200" y="274"
+    font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+    font-size="168" font-weight="900"
+    fill="url(#silver)" text-anchor="middle">T</text>
+
+  <!-- M (silver, right) -->
+  <text x="270" y="274"
+    font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+    font-size="168" font-weight="900"
+    fill="url(#silver)" text-anchor="middle">M</text>
+
+  <!-- A (gold, left — front layer) -->
+  <text x="144" y="274"
+    font-family="'Arial Black','Arial Bold',Gadget,sans-serif"
+    font-size="168" font-weight="900"
+    fill="url(#gold)" text-anchor="middle"
+    filter="url(#aGlow)">A</text>
+
+  <!-- ══════════════════════════════════════════════
+       CIRCUIT TRACES
+       Fan from left → junction → entry on A
+
+       Entry on A left-leg at crossbar height:
+         A center=144, left edge≈144-63=81, crossbar≈y=218
+       Junction pad: (50, 218)
+       Fan endpoints (left pads): y = 178, 198, 218, 238, 258
+  ══════════════════════════════════════════════ -->
+
+  <!-- Main horizontal: junction → A entry -->
+  <line x1="50" y1="218" x2="78" y2="218"
+    stroke="#C8960C" stroke-width="2.2"
+    stroke-linecap="round" filter="url(#trace)"/>
+
+  <!-- Arrow chevrons on main horizontal (">>" pointing right) -->
+  <polyline points="59,212 65,218 59,224"
+    fill="none" stroke="#DAA520" stroke-width="1.8"
+    stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#trace)"/>
+  <polyline points="66,212 72,218 66,224"
+    fill="none" stroke="#DAA520" stroke-width="1.8"
+    stroke-linecap="round" stroke-linejoin="round"
+    filter="url(#trace)"/>
+
+  <!-- Junction pad -->
+  <circle cx="50" cy="218" r="5.5"
+    fill="#050505" stroke="#DAA520" stroke-width="2"
+    filter="url(#trace)"/>
+  <circle cx="50" cy="218" r="2.2" fill="#FFD700"/>
+
+  <!-- Fan branch 1 — top-most -->
+  <line x1="12" y1="178" x2="50" y2="218"
+    stroke="#C8960C" stroke-width="1.7"
+    stroke-linecap="round" filter="url(#trace)"/>
+  <circle cx="12" cy="178" r="4.5"
+    fill="#050505" stroke="#DAA520" stroke-width="1.7"
+    filter="url(#trace)"/>
+  <circle cx="12" cy="178" r="1.8" fill="#FFD700"/>
+
+  <!-- Fan branch 2 -->
+  <line x1="12" y1="198" x2="50" y2="218"
+    stroke="#C8960C" stroke-width="1.7"
+    stroke-linecap="round" filter="url(#trace)"/>
+  <circle cx="12" cy="198" r="4.5"
+    fill="#050505" stroke="#DAA520" stroke-width="1.7"
+    filter="url(#trace)"/>
+  <circle cx="12" cy="198" r="1.8" fill="#FFD700"/>
+
+  <!-- Fan branch 3 — straight (middle) -->
+  <line x1="12" y1="218" x2="50" y2="218"
+    stroke="#C8960C" stroke-width="1.7"
+    stroke-linecap="round" filter="url(#trace)"/>
+  <circle cx="12" cy="218" r="4.5"
+    fill="#050505" stroke="#DAA520" stroke-width="1.7"
+    filter="url(#trace)"/>
+  <circle cx="12" cy="218" r="1.8" fill="#FFD700"/>
+
+  <!-- Fan branch 4 -->
+  <line x1="12" y1="238" x2="50" y2="218"
+    stroke="#C8960C" stroke-width="1.7"
+    stroke-linecap="round" filter="url(#trace)"/>
+  <circle cx="12" cy="238" r="4.5"
+    fill="#050505" stroke="#DAA520" stroke-width="1.7"
+    filter="url(#trace)"/>
+  <circle cx="12" cy="238" r="1.8" fill="#FFD700"/>
+
+  <!-- Fan branch 5 — bottom-most -->
+  <line x1="12" y1="258" x2="50" y2="218"
+    stroke="#C8960C" stroke-width="1.7"
+    stroke-linecap="round" filter="url(#trace)"/>
+  <circle cx="12" cy="258" r="4.5"
+    fill="#050505" stroke="#DAA520" stroke-width="1.7"
+    filter="url(#trace)"/>
+  <circle cx="12" cy="258" r="1.8" fill="#FFD700"/>
+
+  <!-- ══ FULL NAME BELOW CIRCLE ══ -->
+  <text x="200" y="420"
+    font-family="'Helvetica Neue',Helvetica,Arial,sans-serif"
+    font-size="13.5" font-weight="600"
+    fill="url(#nameGold)"
+    text-anchor="middle"
+    letter-spacing="5">AYANDA THABANI MTHETHWA</text>
+
+</svg>
